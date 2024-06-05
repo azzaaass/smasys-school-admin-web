@@ -2,15 +2,16 @@
 
 class App
 {
-    protected $controller = 'KelasController';
-    protected $method = 'index';
+    protected $controller = 'AuthController'; // Default controller
+    protected $method = 'index'; // Default method
     protected $params = [];
 
     public function __construct()
     {
         $url = $this->parseUrl();
-        // controller
-        if (isset($url)) {
+
+        // Controller
+        if (isset($url[0])) {
             if (file_exists('../app/controllers/' . $url[0] . '.php')) {
                 $this->controller = $url[0];
                 unset($url[0]);
@@ -20,7 +21,7 @@ class App
         require_once '../app/controllers/' . $this->controller . '.php';
         $this->controller = new $this->controller;
 
-        //method
+        // Method
         if (isset($url[1])) {
             if (method_exists($this->controller, $url[1])) {
                 $this->method = $url[1];
@@ -28,12 +29,17 @@ class App
             }
         }
 
-        // param
+        // Params
         if (!empty($url)) {
             $this->params = array_values($url);
         }
 
-        // jalankan controller & method + params
+        // Debugging output
+        //echo "Controller: " . get_class($this->controller) . "<br>";
+        //echo "Method: " . $this->method . "<br>";
+        //echo "Params: " . print_r($this->params, true) . "<br>";
+
+        // Jalankan controller & method + params
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
@@ -45,5 +51,6 @@ class App
             $url = explode('/', $url);
             return $url;
         }
+        return ['HomeController', 'index']; // Default controller and method if URL is not set
     }
 }

@@ -21,21 +21,58 @@
 </head>
 
 <body>
-    <div class="flex h-screen bg-gray-200">
-        <div class="w-72 bg-white border-r">
-            <div class="p-4">
-                <h2 class="text-lg font-semibold">SMASYS</h2>
+    <div class="flex h-screen bg-[#eff0f5]">
+        <div class="w-72 bg-[#161f3d] text-white">
+            <div>
+                <h2 class="mt-4 ml-8 text-3xl font-semibold"><i class="mr-3 fa-brands fa-centos"></i>SMASYS</h2>
                 <ul class="mt-4">
-                    <li class="py-2">
-                        <a href="#" class="text-gray-700 hover:text-gray-900">
-                            <p><i class="fa-solid fa-people-roof"></i>Kelas</p>
-                        </a>
+                <li class="flex group">
+                    <div class="w-[95%] py-3 px-8 bg-gradient-to-r group-hover:from-[#161F3D] group-hover:to-[#1D2F69]">
+                            <a href="<?= BASEURL ?>/dashboard/index" class="hover:text-white">
+                                <p class="text-lg"><i class="mr-3 fa-solid fa-house"></i>Dashboard</p>
+                            </a>
+                        </div>
+                        <li class="flex group">
+                    <div class="w-[95%] py-3 px-8 bg-gradient-to-r group-hover:from-[#161F3D] group-hover:to-[#1D2F69]">
+                            <a href="<?= BASEURL ?>/pelajaran/index" class="hover:text-white">
+                                <p class="text-lg"><i class="mr-3 fa-solid fa-chalkboard-user"></i>Guru</p>
+                            </a>
+                        </div>
+                        <div class="group-hover:bg-[#1D2F69] w-[5%]"></div>
                     </li>
-                    <li class="py-2">
-                        <a href="#" class="text-gray-700 hover:text-gray-900">Menu 2</a>
+                        <div class="group-hover:bg-[#1D2F69] w-[5%]"></div>
                     </li>
-                    <li class="py-2">
-                        <a href="#" class="text-gray-700 hover:text-gray-900">Menu 3</a>
+                    <li class="flex group">
+                    <div class="w-[95%] py-3 px-8 bg-gradient-to-r group-hover:from-[#161F3D] group-hover:to-[#1D2F69]">
+                            <a href="<?= BASEURL ?>/kelas/index" class="hover:text-white">
+                                <p class="text-lg"><i class="mr-3 fa-solid fa-people-roof"></i>Kelas</p>
+                            </a>
+                        </div>
+                        <div class="group-hover:bg-[#1D2F69] w-[5%]"></div>
+                    </li>
+                    <li class="flex group">
+                    <div class="w-[95%] py-3 px-8 bg-gradient-to-r group-hover:from-[#161F3D] group-hover:to-[#1D2F69]">
+                            <a href="<?= BASEURL ?>/organisasi/index" class="hover:text-white">
+                                <p class="text-lg"><i class="mr-3 fa-solid fa-user-group"></i>Organisasi</p>
+                            </a>
+                        </div>
+                        <div class="group-hover:bg-[#1D2F69] w-[5%]"></div>
+                    </li>
+                    <li class="flex group">
+                    <div class="w-[95%] py-3 px-8 bg-gradient-to-r group-hover:from-[#161F3D] group-hover:to-[#1D2F69]">
+                            <a href="<?= BASEURL ?>/siswa/index" class="hover:text-white">
+                                <p class="text-lg"><i class="mr-3 fa-solid fa-graduation-cap"></i>Siswa</p>
+                            </a>
+                        </div>
+                        <div class="group-hover:bg-[#1D2F69] w-[5%]"></div>
+                    </li>
+                    <li class="flex group">
+                        <div class="w-[95%] py-3 px-8 bg-gradient-to-r group-hover:from-[#161F3D] group-hover:to-[#1D2F69]">
+                            <a href="<?= BASEURL ?>/auth/logout" class="hover:text-white">
+                                <p class="text-lg"><i class="mr-3 fa-solid fa-right-from-bracket"></i>Logout</p>
+                            </a>
+                        </div>
+                        <div class="group-hover:bg-[#1D2F69] w-[5%]"></div>
                     </li>
                 </ul>
             </div>
