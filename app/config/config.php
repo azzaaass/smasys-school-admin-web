@@ -1,6 +1,7 @@
 <?php
 
-define('BASEURL', 'http://localhost/joki/smasys');
+// define('BASEURL', 'http://localhost/smasys/public');
+define('BASEURL', 'http://localhost/joki/smasys2/public');
 
 // DB
 define('DB_HOST', 'localhost');
